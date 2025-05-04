@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Linktree dengan Animasi Responsif">
+    <title>Linktree</title>
+    <link rel="icon" href="assets/Logo.png" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        blink: 'blink 1s step-end infinite',
+                        pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    },
+                    keyframes: {
+                        blink: {
+                            '0%, 100%': { 'border-color': 'transparent' },
+                            '50%': { 'border-color': 'currentColor' }
+                        },
+                        pulse: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.5' }
+                        }
+                    },
+                    transitionProperty: {
+                        'size': 'width, height',
+                        'spacing': 'margin, padding'
+                    }
+                },
+                fontFamily: {
+                    nunito: ['Nunito', 'sans-serif'],
+                    poppins: ['Poppins', 'sans-serif']
+                }
+            },
+            variants: {
+                extend: {
+                    animation: ['hover', 'focus'],
+                    transitionProperty: ['hover', 'focus']
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-[#2D423A] p-10">
+    <div class="min-h-screen flex justify-center items-start pt-[10vh]">
+        <div class="
+            bg-[#EAE1CA] rounded-[20px] shadow-md text-center 
+            w-[360px] sm:w-[500px] md:w-[700px] lg:w-[1000px] xl:w-[1400px]
+            h-[600px] md:h-[750px]
+            transition-size duration-500 ease-in-out
+            transform-gpu
+            hover:shadow-xl
+            relative
+        ">
+            <div class="
+            absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+            flex justify-center
+            group
+            w-full max-w-[160px] sm:max-w-[190px] md:max-w-[220px] lg:max-w-[220px] xl:max-w-[220px]
+        ">
+                <img src="https://media.discordapp.net/attachments/1067644201870819370/1368489438862249984/gojo-satoru-gojo.gif?ex=6818689b&is=6817171b&hm=d1e3026d59b5080617db9dddce605cc3bfc1d7edf55e907bf4122f3c4c4bca9d&="
+                    alt="Animasi profil pengguna" class="floating-img
+                    aspect-square  
+                    object-cover  
+                    rounded-full
+                    transition-all duration-500
+                    border-[10px] sm:border-[15px] md:border-[20px]
+                    border-[#2D423A]
+                    w-full h-auto">
+            </div>
+            <div
+                class="absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-4 text-center">
+                <div class="text-3xl md:text-4xl text-[#2D423A] font-nunito font-bold mx-auto"
+                    style="width: fit-content">
+                    <span id="typing-text" class="border-r-4 border-black animate-blink"></span>
+                </div>
+                <div class="flex flex-col items-center gap-3 sm:gap-4 md:gap-5 mt-10">
+
+                    <!-- Instagram -->
+                    <button class="flex items-center justify-between 
+               w-[280px] sm:w-[350px] md:w-[400px] lg:w-[450px] xl:w-[1000px]
+               h-[45px] sm:h-[50px] md:h-[55px] lg:h-[60px]
+               bg-[#63826E] text-white font-nunito font-semibold 
+               rounded-[15px] px-2 py-2 
+               transition-all duration-500 ease-in-out
+               transform-gpu
+               hover:bg-[#8CB59A] hover:shadow-xl
+               hover:scale-[1.02] active:scale-[0.98]
+               border-4 border-transparent
+               hover:border-[#30DD69]/30
+               group relative overflow-hidden">
+
+                        <a href="https://www.instagram.com/adelioputra_0/"
+                            class="absolute inset-0 w-full h-full flex items-center justify-between">
+                            <div class="absolute inset-0 bg-[#8CB59A] opacity-0 
+                   group-hover:opacity-100 transition-opacity 
+                   duration-500 ease-in-out"></div>
+
+                            <i class="fa-brands fa-instagram text-lg sm:text-xl z-10 ml-2"></i>
+
+
+                            <span class="flex-1 text-center z-10 
+                   text-xs sm:text-sm md:text-base lg:text-lg
+                   group-hover:tracking-wider transition-all 
+                   duration-300">Instagram</span>
+
+                        </a>
+
+                        <!-- discord -->
+                    </button>
+                    <button class="flex items-center justify-between 
+                    w-[280px] sm:w-[350px] md:w-[400px] lg:w-[450px] xl:w-[1000px]
+                    h-[45px] sm:h-[50px] md:h-[55px] lg:h-[60px]
+                    bg-[#63826E] text-white font-nunito font-semibold 
+                    rounded-[15px] px-4 py-2 
+                    transition-all duration-500 ease-in-out
+                    transform-gpu
+                    hover:bg-[#8CB59A] hover:shadow-xl
+                    hover:scale-[1.02] active:scale-[0.98]
+                    border-4 border-transparent
+                    hover:border-[#30DD69]/30
+                    group relative overflow-hidden">
+
+
+                        <a href="https://discord.com/users/_pacmans" target="_blank" rel="noopener noreferrer"
+                            class="absolute inset-0 w-full h-full flex items-center justify-between px-4">
+
+
+                            <div class="absolute inset-0 bg-[#8CB59A] opacity-0 
+                        group-hover:opacity-100 transition-opacity 
+                        duration-500 ease-in-out"></div>
+
+
+                            <i class="fa-brands fa-discord text-lg sm:text-xl z-10"></i>
+
+                            <span class="flex-1 text-center z-10 
+                        text-xs sm:text-sm md:text-base lg:text-lg
+                        group-hover:tracking-wider transition-all 
+                        duration-300">Discord</span>
+                        </a>
+                    </button>
+
+                    <!-- github -->
+                    <button class="flex items-center justify-between 
+                    w-[280px] sm:w-[350px] md:w-[400px] lg:w-[450px] xl:w-[1000px]
+                    h-[45px] sm:h-[50px] md:h-[55px] lg:h-[60px]
+                    bg-[#63826E] text-white font-nunito font-semibold 
+                    rounded-[15px] px-4 py-2 
+                    transition-all duration-500 ease-in-out
+                    transform-gpu
+                    hover:bg-[#8CB59A] hover:shadow-xl
+                    hover:scale-[1.02] active:scale-[0.98]
+                    border-4 border-transparent
+                    hover:border-[#30DD69]/30
+                    group relative overflow-hidden">
+
+
+                        <a href="https://github.com/PyAde" target="_blank" rel="noopener noreferrer"
+                            class="absolute inset-0 w-full h-full flex items-center justify-between px-4">
+
+
+                            <div class="absolute inset-0 bg-[#8CB59A] opacity-0 
+                        group-hover:opacity-100 transition-opacity 
+                        duration-500 ease-in-out"></div>
+
+
+                            <i class="fa-brands fa-github text-lg sm:text-xl z-10"></i>
+
+                            <span class="flex-1 text-center z-10 
+                        text-xs sm:text-sm md:text-base lg:text-lg
+                        group-hover:tracking-wider transition-all 
+                        duration-300">Github</span>
+
+
+                        </a>
+                    </button>
+                    <!-- portfolio -->
+                    <button class="flex items-center justify-between 
+                    w-[280px] sm:w-[350px] md:w-[400px] lg:w-[450px] xl:w-[1000px]
+                    h-[45px] sm:h-[50px] md:h-[55px] lg:h-[60px]
+                    bg-[#63826E] text-white font-nunito font-semibold 
+                    rounded-[15px] px-4 py-2 
+                    transition-all duration-500 ease-in-out
+                    transform-gpu
+                    hover:bg-[#8CB59A] hover:shadow-xl
+                    hover:scale-[1.02] active:scale-[0.98]
+                    border-4 border-transparent
+                    hover:border-[#30DD69]/30
+                    group relative overflow-hidden">
+
+
+                        <a href="https://post-pi-six.vercel.app/" target="_blank" rel="noopener noreferrer"
+                            class="absolute inset-0 w-full h-full flex items-center justify-between px-4">
+
+
+                            <div class="absolute inset-0 bg-[#8CB59A] opacity-0 
+                        group-hover:opacity-100 transition-opacity 
+                        duration-500 ease-in-out"></div>
+
+
+                            <i class="fa-solid fa-globe text-lg sm:text-xl z-10"></i>
+
+                            <span class="flex-1 text-center z-10 
+                        text-xs sm:text-sm md:text-base lg:text-lg
+                        group-hover:tracking-wider transition-all 
+                        duration-300">Website</span>
+
+
+                        </a>
+                    </button>
+
+                    <!-- Linkedln -->
+                    <button class="flex items-center justify-between 
+                    w-[280px] sm:w-[350px] md:w-[400px] lg:w-[450px] xl:w-[1000px]
+                    h-[45px] sm:h-[50px] md:h-[55px] lg:h-[60px]
+                    bg-[#63826E] text-white font-nunito font-semibold 
+                    rounded-[15px] px-4 py-2 
+                    transition-all duration-500 ease-in-out
+                    transform-gpu
+                    hover:bg-[#8CB59A] hover:shadow-xl
+                    hover:scale-[1.02] active:scale-[0.98]
+                    border-4 border-transparent
+                    hover:border-[#30DD69]/30
+                    group relative overflow-hidden">
+
+
+                        <a href="https://www.linkedin.com/in/putu-adelio-317094290/" target="_blank"
+                            rel="noopener noreferrer"
+                            class="absolute inset-0 w-full h-full flex items-center justify-between px-4">
+
+
+                            <div class="absolute inset-0 bg-[#8CB59A] opacity-0 
+                        group-hover:opacity-100 transition-opacity 
+                        duration-500 ease-in-out"></div>
+
+
+                            <i class="fa-brands fa-linkedin text-lg sm:text-xl z-10"></i>
+
+                            <span class="flex-1 text-center z-10 
+                        text-xs sm:text-sm md:text-base lg:text-lg
+                        group-hover:tracking-wider transition-all 
+                        duration-300">Linkedln</span>
+
+
+                        </a>
+                    </button>
+
+
+                    <button class="flex items-center justify-between mt-5
+                    w-[200px] 
+                    h-[45px]
+                    bg-[#63826E] text-white font-nunito font-semibold 
+                    rounded-[15px] px-4 py-2 
+                    transition-all duration-500 ease-in-out
+                    transform-gpu
+                    hover:bg-[#8CB59A] hover:shadow-xl
+                    hover:scale-[1.02] active:scale-[0.98]
+                    border-4 border-transparent
+                    hover:border-[#30DD69]/30
+                    group relative overflow-hidden">
+
+                        <a href="https://saweria.co/PyAde" target="_blank" rel="noopener noreferrer"
+                            class="absolute inset-0 w-full h-full flex items-center justify-between px-4">
+
+                            <div class="absolute inset-0 bg-[#8CB59A] opacity-0 
+                         group-hover:opacity-100 transition-opacity 
+                         duration-500 ease-in-out"></div>
+
+                            <i class="fas fa-hand-holding-heart text-lg sm:text-xl z-10"></i> <!-- Ganti icon -->
+
+                            <span class="flex-1 text-center z-10 
+                          text-xs sm:text-sm md:text-base lg:text-lg
+                          group-hover:tracking-wider transition-all 
+                          duration-300">Saweria</span>
+                        </a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>

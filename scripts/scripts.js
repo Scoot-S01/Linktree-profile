@@ -39,3 +39,9 @@ function type() {
 document.addEventListener("DOMContentLoaded", () => {
   type();
 });
+
+document.getElementById('profil-img').addEventListener('error', function(){
+  this.src = 'assets/Gojo.jpeg'
+})
+
+
